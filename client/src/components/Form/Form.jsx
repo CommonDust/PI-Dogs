@@ -133,7 +133,6 @@ const handleDelete = (el) => {
 
         <div className={style.error_form}>{errors.height && <p>{errors.height}</p>}</div>
 
-<br/>
 
         <div className={style.weight_container}>
         <input type='text' name='min_weight' value={form.min_weight} className={style.weight} placeholder='Enter min weight' onChange={(e) => handleChange(e)}/>
@@ -143,7 +142,6 @@ const handleDelete = (el) => {
 
         <div className={style.error_form}>{errors.weight && <p>{errors.weight}</p>}</div>
 
-<br />
 
         <input type='text' name='life_span' value={form.life_span} placeholder='Enter life span' onChange={(e) => handleChange(e)}/>
 

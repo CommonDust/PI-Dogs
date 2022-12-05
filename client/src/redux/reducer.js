@@ -119,13 +119,13 @@ const initialState = {
         ...state,
         dogs: sortedName,
       };
-     
+      
       case ORDER_BY_ASCENDESCEN:
         return{
           ...state,
           dogs: state.dogs.reverse()
         }
-     
+      
       default:
             return { ...state };
     }

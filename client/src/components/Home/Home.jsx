@@ -12,9 +12,9 @@ function Home() {
   const dispatch = useDispatch()
   const allDogs = useSelector((state) => state.allDogs)
   const allTemperaments = useSelector((state) => state.temperaments)
-
   
-
+  
+  
     useEffect(() =>{
       
       dispatch(getDogs())
@@ -30,7 +30,7 @@ function Home() {
   
     const [orden, setOrden] = useState("");
   
-
+    
     
 
     const paginado = (pageNumber) => {
@@ -41,7 +41,7 @@ function Home() {
       e.preventDefault();    
       dispatch(FilterByTemperament(e.target.value));
     };
- 
+
 
     const handleFilterByAlphabeticName = (e) => {
       e.preventDefault();
@@ -118,8 +118,9 @@ function Home() {
         {currentDogs?.map((el) =>  {
         
           return(
+            
             <div key={el.id} className={style.card}>
-              
+            
               <Link to={`/dogs/${el.id}`}>
                 {
                   allDogs && <Card key={el.id} image={el.image} name={el.name} weight={el.weight} temperaments={el.temperaments[0].name ? el.temperaments.map(el => el.name) : el.temperaments}/>
