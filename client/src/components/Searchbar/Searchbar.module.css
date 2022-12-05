@@ -1,0 +1,41 @@
+
+
+
+.searchbar_container{
+    display: inline-block;
+    justify-content: center;
+}
+
+.input{
+   display: block;
+    border-radius: 5px;
+   font-family: 'Solway', serif;
+   height: 25px;
+   text-align: center;
+   border: none;
+   background: #bde0fe;
+
+}
+
+
+
+.submit{
+    display: block;
+    color: #af42ae;
+    border: none;
+    background: #ffafcc;
+    border-radius:  5px;
+    font-family: 'Solway', serif;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.submit:hover{
+    transition: 0.5s;
+    background:linear-gradient(#bde0fe,#ffafcc);
+    width: 125px;
+    height: 30px;
+
+}

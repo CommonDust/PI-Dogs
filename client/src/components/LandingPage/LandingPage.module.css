@@ -1,0 +1,38 @@
+.all{
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../pngtree-cute-cartoon-dog-wallpaper-picture-image_1348618.jpg');
+    height: 100vh;
+    font-family: 'Solway', serif;
+    font-size: 50px;
+    color: #af42ae; ;
+}
+
+
+
+.btn{
+    color: #af42ae;
+    font-family: 'Solway', serif;
+    border-radius: 100%;
+    padding: 2px;
+    height: 150px;
+    width: 150px;
+    direction: ltr;
+    background: #bde0fe;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition-duration: 1.2s;
+    font-size: 15px;
+}
+
+.btn:Hover{
+    transition-duration: 1.2s;
+    height: 175px;
+    width: 175px;
+    
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    cursor: pointer;
+    font-size: 17.5px;
+}
+
+
+

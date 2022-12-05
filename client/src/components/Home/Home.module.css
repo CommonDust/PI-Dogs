@@ -1,0 +1,196 @@
+.all{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background: none;
+    font-family: 'Solway', serif;
+    background: linear-gradient(#ffccd5,#bde0fe, #219ebc);
+    
+}
+
+
+
+.container{
+    margin: 0 6%;
+    padding-bottom: 0.5rem;
+    display: block;
+}
+
+a:link{
+    text-decoration: none;
+}
+a:visited {
+    
+    text-decoration: none;
+    
+    }
+
+    .home{
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        float: left;
+        font-family: 'Solway', serif;
+        background: #ffccd5;
+        
+    }
+    
+    .home:hover{
+        
+        background: linear-gradient(#ffccd5,#bde0fe);
+        
+    }
+
+    button{ 
+        cursor: pointer; 
+        border: none;
+        position: relative;
+    }
+
+.form{
+    display: inline-block;
+    width: 100%;
+    max-width: 170px;
+    font-size: 0.9rem; 
+    padding: 0.6rem 0.6rem;
+    transition: 0.5s;
+    z-index: 100;
+    border-radius: 5px;
+    background: #bde0fe;
+    box-shadow: 5px 3px 5px 0.5px rgba(0,0,0,0.6);
+    margin: 7px;
+    
+}
+
+
+.form:hover{
+    margin:12px;
+    height:25px;
+    width: 100%;
+    max-width: 210px;
+    font-size: 1.1rem;
+}
+
+.button_form{ 
+    background: #bde0fe;
+    color: #af42ae;
+    font-family: 'Solway', serif;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    font-family: 'Solway', serif;
+    text-align: center;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+
+
+
+
+.container_filters{
+    display: flex;
+    width: 190%;
+    margin-top: 1.3rem;
+    border-radius: 25px;
+}
+
+
+.container_filters select{
+    border: none;
+    box-shadow: 5px 5px 5px 0.5px rgba(0,0,0,0.4);
+    background-color: #bde0fe;
+    color: #af42ae;
+    cursor: pointer;
+}
+
+
+.container_filters select:first-child{
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.container_filters select:last-child{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+
+.main_container{
+    margin: 0 5% 0 5%;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5% 0.9%;
+    justify-items: center;
+    padding: 2rem 0 2rem 0;
+    
+}
+
+.card{
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Solway', serif;
+    
+  }
+
+.searchBar{
+    display: inline-block;
+    justify-content: center;
+    height: 20px;
+    width: 150px;
+    border-radius: 2px;
+    font-family: 'Solway', serif;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    
+}
+
+
+
+.oa_p{
+    color: #af42ae;
+    grid-column: 3;
+    height: 20px;
+    width: 150px;
+    grid-row: 2 ;
+    cursor: pointer;
+    border-radius: 2px;
+    font-family: 'Solway', serif;
+}
+.a_d{
+    color: #af42ae;
+    grid-column: 4;
+    height: 20px;
+    width: 150px;
+    grid-row: 2 ;
+    cursor: pointer;
+    border-radius: 2px;
+    font-family: 'Solway', serif;
+}
+
+    .r_t{
+        color: #af42ae;
+        grid-column: 2;
+        height: 20px;
+        width: 150px;
+        grid-row: 2 ;
+        cursor: pointer;
+        border-radius: 2px;
+        font-family: 'Solway', serif;
+    }
+        .weight{
+        color: #af42ae;
+        grid-column:1;
+        height: 20px;
+        width: 150px;
+        grid-row: 2 ;
+        border-radius: 2px;
+        font-family: 'Solway', serif;
+        cursor: pointer;
+        }
