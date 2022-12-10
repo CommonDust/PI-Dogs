@@ -10,7 +10,7 @@ export const GET_FILTER_RACE = 'GET_FILTER_RACE'
 export const ORDER_BY_NAME = 'ORDER_BY_NAME'
 export const ORDER_BY_WEIGHT = 'ORDER_BY_WEIGHT'
 export const ORDER_BY_ASCENDESCEN = 'ORDER_BY_ASCENDESCEN'
-
+export const BRING_29_LESS = "BRING_29_LESS"
 
 export const getDogs = () => {
     return (dispatch) => {
@@ -86,3 +86,5 @@ export function postDog(payload) {
         return data;
     }
 }
+
+

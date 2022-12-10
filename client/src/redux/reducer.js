@@ -1,4 +1,4 @@
-import { GET_DOGS, DETAIL_DOG, GET_DOG_BY_NAME, GET_TEMPERAMENTS, GET_FILTER_TEMPERAMENTS, ORDER_BY_WEIGHT, ORDER_BY_NAME, ORDER_BY_ASCENDESCEN } from "./actions"
+import { GET_DOGS, DETAIL_DOG, GET_DOG_BY_NAME, GET_TEMPERAMENTS, GET_FILTER_TEMPERAMENTS, ORDER_BY_WEIGHT, ORDER_BY_NAME, BRING_29_LESS,ORDER_BY_ASCENDESCEN } from "./actions"
 
 
 const initialState = {
@@ -125,6 +125,7 @@ const initialState = {
           ...state,
           dogs: state.dogs.reverse()
         }
+        
       
       default:
             return { ...state };

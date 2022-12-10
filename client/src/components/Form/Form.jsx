@@ -7,10 +7,10 @@ import style from './Form.module.css'
 
 const validate = (form) => {
   let errors = {}
-  if(!form.name) {
+  if(!form.name || typeof form.name === "string") {
       errors.name = "Name is required, it should not contain numbers"
   }
-  if(!form.min_height || !form.max_height) {
+  if(!form.min_height || !form.max_height || form.min_height < form.max_height ) {
       errors.height = "Height is required"
   }
   if(!form.min_weight || !form.max_weight) {
@@ -87,7 +87,7 @@ useEffect(() => {
 }, [dispatch]);
 
 useEffect(()=>{
-  if (form.name.length > 0 && form.min_height.length > 0  && form.max_height.length > 0 && form.min_weight.length > 0 && form.max_weight.length > 0) setButton(false)
+  if (form.name.length > 0 && typeof form.name == "string" && form.min_height.length > 0 && form.min_height < form.max_height  && form.max_height.length > 0 && form.min_weight.length > 0 && form.min_weight < form.max_weight && form.max_weight.length > 0) setButton(false)
   else setButton(true)
 }, [form, setButton]);
 

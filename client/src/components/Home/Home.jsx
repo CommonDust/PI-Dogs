@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getDogs,FilterByTemperament,OrderByName, OrderByWeight, OrderAscenDescen, getTemperaments } from '../../redux/actions'
+import { getDogs,FilterByTemperament,OrderByName, OrderByWeight, OrderAscenDescen, bring29less ,getTemperaments } from '../../redux/actions'
 import { Link } from 'react-router-dom'
 import Card from '../Card/Card'
 import Searchbar from '../Searchbar/Searchbar'
 import Paginate from '../Paginate/Paginate'
 import style from '../Home/Home.module.css'
 
+
 function Home() {
 
   const dispatch = useDispatch()
   const allDogs = useSelector((state) => state.allDogs)
   const allTemperaments = useSelector((state) => state.temperaments)
-  
   
   
     useEffect(() =>{
@@ -27,39 +27,59 @@ function Home() {
     const lastIndex = currentPage * dogsPerPage; 
     const firstIndex = lastIndex - dogsPerPage;
     const currentDogs = allDogs.slice(firstIndex, lastIndex);
-  
-    const [orden, setOrden] = useState("");
-  
     
     
+    const handleNextPage = () => {
+      if(currentPage < 22)
+      setCurrentPage(currentPage + 1)
+    }
+    
+    const handlePrevPage = () => {
+      if(currentPage > 1){
+      setCurrentPage(currentPage - 1)
+    }
+    }
+    
+
+    const [order, setOrder] = useState("")
 
     const paginado = (pageNumber) => {
       setCurrentPage(pageNumber)
     };
 
+    
+
     const handleFilterByTemperament = (e) => {
       e.preventDefault();    
       dispatch(FilterByTemperament(e.target.value));
+      setCurrentPage(1);
+      setOrder(`Ordenado ${e.target.value}`);
     };
 
 
     const handleFilterByAlphabeticName = (e) => {
       e.preventDefault();
       dispatch(OrderByName(e.target.value))
-      setOrden(`Ordenado ${e.target.value}`);
+      setCurrentPage(1);
+      setOrder(`Ordenado ${e.target.value}`);
+      ;
     }
 
     const handleFilterByWeight = (e) => {
       e.preventDefault();
       dispatch(OrderByWeight(e.target.value))
-      setOrden(`Ordenado ${e.target.value}`);
+      setCurrentPage(1);
+      setOrder(`Ordenado ${e.target.value}`);
+      ;
       
     }
 
     const handleOrderByAscenDescen = (e) => {
       e.preventDefault();
       dispatch(OrderAscenDescen(e.target.value))
-      setOrden(`Ordenado ${e.target.value}`)
+      setCurrentPage(1);
+      setOrder(`Ordenado ${e.target.value}`);
+      
     }
     
 
@@ -123,7 +143,7 @@ function Home() {
             
               <Link to={`/dogs/${el.id}`}>
                 {
-                  allDogs && <Card key={el.id} image={el.image} name={el.name} weight={el.weight} temperaments={el.temperaments[0].name ? el.temperaments.map(el => el.name) : el.temperaments}/>
+                  allDogs && <Card key={el.id} image={el.image} name={el.name} weight={el.weight} temperaments={el.temperaments[0].name ? el.temperaments.map(el => el.name) : el.temperaments.map(el => el) }/>
                 }
               </Link>
             </div>      
@@ -133,8 +153,16 @@ function Home() {
         
         </div>
     </div>
+    <div>
+    
+      </div>
     <div className={`${style.pagination}`}>
+    <button onClick={handlePrevPage} className={style.next_prev}>Previous</button>
         <Paginate dogsPerPage={dogsPerPage} allDogs={allDogs.length} paginado={paginado}/> {/*el valor de la funcion de paginado aumenta segun el bucle for en el componente Paginate*/}
+        <button onClick={handleNextPage} className={style.next_prev}>Next</button>
+      </div>
+      <div>
+        
       </div>
   </div>
   

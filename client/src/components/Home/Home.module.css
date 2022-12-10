@@ -84,6 +84,7 @@ a:visited {
     text-align: center;
     margin-left: 0;
     padding-left: 0;
+    align-items: center;
 }
 
 
@@ -193,4 +194,21 @@ a:visited {
         border-radius: 2px;
         font-family: 'Solway', serif;
         cursor: pointer;
+        
+        }
+
+        .next_prev{
+            color: #fa6da1;
+            background-color: white;
+            width: auto;
+            padding: 0.5rem 0.7rem;
+            border-radius: 5px;
+            border: 1px solid #fa6da1;
+            text-align: center;
+            transition: 0.5s;
+        }
+        
+        .next_prev:hover{
+            transition: 0.5s;
+            background: #ffc3d9;
         }
