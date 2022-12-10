@@ -14,7 +14,7 @@ export const BRING_29_LESS = "BRING_29_LESS"
 
 export const getDogs = () => {
     return (dispatch) => {
-        axios.get("http://localhost:3001/dogs")
+        axios.get("/dogs")
         .then((response) => {
             dispatch({type: GET_DOGS, payload: response.data})
         })
@@ -25,7 +25,7 @@ export const getDogs = () => {
 
 export const detailDog = (id) => {
     return (dispatch) => {
-        axios.get(`http://localhost:3001/dogs/${id}`)
+        axios.get(`/dogs/${id}`)
         .then((response) => {
             dispatch({type: DETAIL_DOG, payload: response.data})
             
@@ -37,7 +37,7 @@ export const detailDog = (id) => {
 
 export const nameDog = (payload) => {
     return (dispatch) => {
-        axios.get(`http://localhost:3001/dogs?name=${payload}`)
+        axios.get(`/dogs?name=${payload}`)
         .then(response => dispatch({type:GET_DOG_BY_NAME, payload:response.data}), 'Can´not load your dog' );
     }
 }
@@ -47,7 +47,7 @@ export const nameDog = (payload) => {
 
 export const getTemperaments = ()=>{
     return (dispatch) => {
-        axios.get(`http://localhost:3001/temperament`)
+        axios.get(`/temperament`)
         .then(response => dispatch({type:GET_TEMPERAMENTS, payload:response.data}))
     }
 }
@@ -82,7 +82,7 @@ export function OrderAscenDescen(payload) {
 
 export function postDog(payload) {
     return async function () {
-        const data = await axios.post("http://localhost:3001/dogs", payload); 
+        const data = await axios.post("/dogs", payload); 
         return data;
     }
 }
